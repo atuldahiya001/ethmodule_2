@@ -28,7 +28,8 @@ After cloning GitHub, you will want to do the following to get the code running 
 1. Inside the project directory, in the terminal type: npm i
 2. Open two additional terminals in your VS code
 3. In the second terminal type: npx hardhat node
-4. In the third terminal, type: npx hardhat run --network localhost scripts/deploy.js
+4. In the third terminal, type: npx hardhat run --network localhost scripts/deploy.js <br>
+  (Note: You can also verify the address of deployment to contractAddress in index.js file)
 5. Back in the first terminal, type npm run dev to launch the front end.
 
 After this, the project will be running on your local host. 
@@ -47,6 +48,7 @@ Typically at http://localhost:3000/
 -> Set the (Currency symbol - ETH )
 ->Now set the MetaMask wallet network to the newly created local network</pre>
 
--> To set up an account you have to import an account with the account's private key which you can find in the 2nd terminal where we have executed this command `npx hardhat node`. after hitting enter you can see there are many account numbers with private keys written in the terminal just take any account's corresponding private key to import it your Metamask Wallet
+-> To set up an account you have to import an account with the account's private key which you can find in the 2nd terminal where we have executed this command `npx hardhat node`. after hitting enter you can see there are many account numbers with private keys written in the terminal just take any account's corresponding private key to import it to your Metamask Wallet
  
 -> Head to http://localhost:3000/ to start interacting with the Metamask Wallet
+-> You can also see all transaction details in the deploy terminal.
