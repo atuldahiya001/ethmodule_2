@@ -50,5 +50,5 @@ Typically at http://localhost:3000/
 
 -> To set up an account you have to import an account with the account's private key which you can find in the 2nd terminal where we have executed this command `npx hardhat node`. after hitting enter you can see there are many account numbers with private keys written in the terminal just take any account's corresponding private key to import it to your Metamask Wallet
  
--> Head to http://localhost:3000/ to start interacting with the Metamask Wallet
+-> Head to http://localhost:3000/ to start interacting with the Metamask Wallet <br>
 -> You can also see all transaction details in the deploy terminal.
