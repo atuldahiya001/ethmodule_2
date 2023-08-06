@@ -4,7 +4,7 @@ import crypto_making_tree_abi from "../artifacts/contracts/MySmartContract.sol/S
 
 export default function Homepage() {
 
-    const [meMessage,setMeMessage] = useState("Hi There (^_^)");
+    const [meMessage,setMeMessage] = useState("WELCOME");
     const [defaultAccount,setDefaultAccount] = useState(undefined);
     const [balance,setBalance] = useState(undefined);
     const [ethWallet,setEthWallet] = useState(undefined); 
@@ -21,7 +21,7 @@ export default function Homepage() {
 
     const deposit = async() => {
         if(mysmartcontract) {
-            let tx = await mysmartcontract.Deposite(1);
+            let tx = await mysmartcontract.Deposite(5);
             await tx.wait();
             getBalance();
         }
@@ -29,7 +29,7 @@ export default function Homepage() {
 
     const withdraw = async() => {
         if (mysmartcontract) {
-            let tx = await mysmartcontract.Withdraw(1);
+            let tx = await mysmartcontract.Withdraw(5);
             await tx.wait();
             getBalance();
         }
@@ -87,7 +87,7 @@ export default function Homepage() {
         }
 
         if(!defaultAccount){
-            return (<button onClick={connectWallettHandler}>"Let's Connect With Your Wallet"</button>)
+            return (<button onClick={connectWallettHandler}>"CONNECT TO THE METAMASK"</button>)
         }
 
         getBalance();
@@ -96,8 +96,8 @@ export default function Homepage() {
             <div>
                 <p>Your Account : {defaultAccount}</p>
                 <p>Your Balance : {balance}</p>
-                <button onClick={deposit}>Deposite 1 ETH</button>
-                <button onClick={withdraw}>Withdraw 1 ETH</button>
+                <button onClick={deposit}>Deposite 5 ETH</button>
+                <button onClick={withdraw}>Withdraw 5 ETH</button>
             </div>
         )
     }
@@ -106,7 +106,7 @@ export default function Homepage() {
 
     return (
       <main className="container">
-        <header><h1>Welcome to the Metacrafters Novice's Infinite Crypto Currency Making Tree Interface!</h1></header>
+        <header><h1><strong>WELCOME TO WALLET OF SUDEEP</strong></h1></header>
         <h2>{meMessage}</h2>
         {initUser()}
         <style jsx>{`
